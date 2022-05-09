@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #434B4D;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appFx.ChoixSportController">
+    <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                          <Label text="Musculation" textFill="WHITE">
+                              <font>
+                                  <Font size="19.0" />
+                              </font>
+                          </Label>
+                        <Label fx:id="musculationState" text="Place Libre" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                            <Button fx:id="muscu" mnemonicParsing="false" onAction="#MusculationController" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eb9d00;">
+                           <graphic>
+                                  <ImageView fx:id="altereImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                          <Image url="@../../../../src/main/resources/app/altere.png" />
+                                      </image>
+                                  </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="400.0" prefWidth="300.0" spacing="10.0">
+                     <children>
+                          <Label text="Fitness" textFill="WHITE">
+                              <font>
+                                  <Font size="19.0" />
+                              </font>
+                          </Label>
+                        <Label fx:id="fitnessState" text="Place Libre" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="fitness" mnemonicParsing="false" onAction="#goOnFitness" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eb9d00;">
+                           <graphic>
+                                  <ImageView fx:id="fitnessImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                      <image>
+                                          <Image url="@../../../../src/main/resources/app/fitness.png" />
+                                      </image>
+                                  </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+              <Button fx:id="retour" mnemonicParsing="false" onAction="#retourEntreeSortie" prefHeight="37.0" prefWidth="356.0" style="-fx-background-color: Eb9d00;" text="Retour" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
